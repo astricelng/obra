@@ -1,0 +1,48 @@
+// ==========================================================================
+// Margin mixins
+// ==========================================================================
+
+
+// Left margin
+@mixin margin-left($value)
+{
+
+  .ml#{$value}
+  {
+    margin-left: $value+px;
+  }
+
+}
+
+// Right margin
+@mixin margin-right($value)
+{
+
+  .mr#{$value}
+  {
+    margin-right: $value+px;
+  }
+
+}
+
+// Bottom margin
+@mixin margin-bottom($value)
+{
+
+  .mb#{$value}
+  {
+    margin-bottom: $value+px;
+  }
+
+}
+
+// Top margin
+@mixin margin-top($value)
+{
+
+  .mt#{$value}
+  {
+    margin-top: $value+px;
+  }
+
+}

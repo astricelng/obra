@@ -1,0 +1,46 @@
+// ==========================================================================
+// Layout mixins
+// ==========================================================================
+
+
+// Horizontal align for absolute position
+@mixin horizontal-align()
+{
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+// Vertical align for absolute position
+@mixin vertical-align()
+{
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// Center align for absolute position
+@mixin center-all()
+{
+  top: 50%;
+  left: 50%;
+
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+// Auto aling center elements (margin left - right auto)
+@mixin push-auto()
+{
+  margin:
+  {
+    left: auto;
+    right: auto;
+  }
+}

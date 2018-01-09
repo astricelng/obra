@@ -1,0 +1,111 @@
+// ==========================================================================
+// Layout mixins
+// ==========================================================================
+
+
+// Input field
+@mixin input-field($background, $color, $border-color, $font)
+{
+  .input-field
+  {
+    font-family: $font;
+    @include font-size(16px);
+    font-weight: normal;
+
+    color: $color;
+
+    display: block;
+
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+
+    border: none;
+    border-bottom: 1px solid $border-color;
+    background-color: $background;
+
+    &:invalid
+    {
+      box-shadow: none;
+    }
+
+    &:focus
+    {
+      outline: none;
+      border-bottom-color: transparent;
+    }
+
+    & ~ label
+    {
+      font-family: $font;
+      @include font-size(16px);
+      font-weight: normal;
+
+      position: absolute;
+      top: 10px;
+      left: 5px;
+
+      @include transition(0.2s ease all);
+      pointer-events: none;
+
+      color: $color;
+      letter-spacing: 1px;
+    }
+
+    &:focus ~ label,
+    &:valid ~ label
+    {
+      @include font-size(16px);
+      top: -20px;
+      color: $color;
+    }
+
+  }
+}
+
+// Input field states
+@mixin input-field-states($name, $color)
+{
+  .input-#{$name}:focus ~ label,
+  .input-#{$name}:valid ~ label
+  {
+    color: $color;
+  }
+
+  .input-#{$name}:focus ~ .input-bar:before,
+  .input-#{$name}:focus ~ .input-bar:after
+  {
+    width: 50%;
+    background-color: $color;
+  }
+
+  .input-#{$name}:focus ~ .input-highlight,
+  .input-#{$name}:focus ~ .input-highlight
+  {
+    @include animation(inputHighlighter#{$name} .3s ease);
+  }
+
+  // Animation highlight
+  @-webkit-keyframes inputHighlighter#{$name}
+  {
+    from
+    {
+      background: $color;
+    }
+    to
+    {
+      width: 0; background: transparent;
+    }
+  }
+
+  @keyframes inputHighlighter#{$name}
+  {
+    from
+    {
+      background: $color;
+    }
+    to
+    {
+      width: 0; background: transparent;
+    }
+  }
+}

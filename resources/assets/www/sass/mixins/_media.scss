@@ -1,0 +1,19 @@
+
+
+
+// Breakpo
+$iphone-break: 320px;
+$xs-break: 480px;
+$sm-break: 768px;
+$md-break: 992px;
+$lg-break: 1200px;
+$xlg-break: 1440px;
+
+// Media query generators
+@mixin respond-to($query)
+{
+  @media only screen and (min-width: $query)
+  {
+    @content
+  }
+}

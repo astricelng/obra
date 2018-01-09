@@ -1,0 +1,119 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+//
+// Table of Contents:
+//
+//  1. Custom paths
+//  2. Colors
+//  3. Background
+//  4. Z-index
+//  5. Typography
+//  6. Bounds
+//  7. Buttons
+//  8. Preloader
+//  9. Footer
+// 10. Nav
+// 11. Inputs
+// 12. Borders
+
+
+// 1. Custom paths
+// ==========================================================================
+$fa-font-path: "~font-awesome/fonts/";
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+// 2. Colors
+// ==========================================================================
+$white-color: #ffffff;
+
+$yellow-light-color: #f9efb0; // yellow light
+$yellow-dark-color: #ebe1a5; // yellow dark
+
+$gray-light-color: #f5f5f5; // gray light
+$gray-color: #b2b2b2; // gray
+$gray-dark-color: #505050; // gray dark
+
+$redwine-color: #392b27; // red wine
+
+// 3. Backgrounds
+// ==========================================================================
+$body-bg: $gray-light-color; // gray dark
+
+$primary-brand-bg: $yellow-light-color; // yellow light
+$secondary-brand-bg: $white-color; // white
+
+$white-panel-bg: $secondary-brand-bg; // white
+
+$contact-bg: $gray-light-color; // gray light
+$footer-bg: $gray-dark-color; // gray dark
+
+// 4. Z-Index
+// ==========================================================================
+$z-index-base: 1000;                        // 1000
+
+$z-index-bgc: 1020;                         // 1020
+$z-index-layer: 1040;                       // 1040
+$z-index-panel: 1050;                       // 1050
+
+$z-index-footer: 1090;                      // 1090
+$z-index-header: 1090;                      // 1090
+$z-index-menu: 2000;                        // 2000
+$z-index-trigger: 2010;                     // 2010
+
+// 5. Typography
+// ==========================================================================
+$font-avant: 'AvantGarde', sans-serif;
+
+// Base typo vars
+$font-family-base: $font-avant;
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
+// Fonts
+$base-title-font:  $font-avant;
+$base-text-font:  $font-avant;
+
+// 6. Bounds
+// ==========================================================================
+$mobile-margin: 25px;
+$desktop-margin: 50px;
+
+// 8. Preloader
+// ==========================================================================
+$btn-primary-font: $font-avant;
+$btn-primary-color: $redwine-color; // red wine
+$btn-primary-bg: $primary-brand-bg; // transparent
+$btn-primary-hover-bg: darken($btn-primary-bg, 5%); // red light
+$btn-primary-border: $primary-brand-bg; // red light
+
+
+// 9. Footer
+// ==========================================================================
+$footer-font: $font-avant;
+$footer-color: $white-color; // white
+$footer-sitemap-color: $white-color; // yellow light
+
+// 10. Nav
+// ==========================================================================
+$nav-trigger-bg: $white-color; // white
+$nav-trigger-bar: $redwine-color; // red wine
+
+$nav-title-font: $font-avant;
+$nav-title-color: $gray-color; // gray
+
+$nav-option-font: $font-avant;
+$nav-option-color: $white-color; // white
+
+// 11. Inputs
+// ==========================================================================
+$input-font: $font-avant;
+
+$input-bg: transparent; // gray light
+$input-primary-color: $gray-color; // red wine
+$input-border: $gray-color; // gray dark
+$input-primary-active-color: $redwine-color; // yellow light
+
+// 12. Borders
+// ==========================================================================
+$gray-border: $gray-color; // gray light

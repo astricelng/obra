@@ -1,0 +1,57 @@
+// ==========================================================================
+// Typo stylesheet
+// ==========================================================================
+//
+// Table of Contents:
+//
+//  1. Base typo
+//  2. Typo color variant
+//  3. Typo sizes
+
+
+// 1. Base typo
+// ==========================================================================
+%base_typo
+{
+  text-decoration: none;
+
+  margin: 0;
+  padding: 0;
+
+  &:hover,
+  &:focus
+  {
+    text-decoration: none;
+  }
+}
+
+.base-title
+{
+  font-family: $base-title-font;
+  font-weight: bold;
+  @include font-size(18px);
+
+  text-transform: uppercase;
+
+  @extend %base_typo;
+}
+
+.base-text
+{
+  font-family: $base-text-font;
+  font-weight: 400;
+  @include font-size(16px);
+
+  @extend %base_typo;
+}
+
+// 2. Typo color variant
+// ==========================================================================
+@include text-variant('text-gray-dark', $gray-dark-color);
+@include text-variant('text-redwine', $redwine-color);
+
+@include text-variant('title-gray', $gray-color);
+@include text-variant('title-yellow-dark', $yellow-dark-color);
+@include text-variant('title-red-wine', $redwine-color);
+@include text-variant('title-white', $white-color);
+

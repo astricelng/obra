@@ -1,0 +1,25 @@
+// ==========================================================================
+// Utility classes
+// ==========================================================================
+
+
+// Left margins
+@include margin-left(5);
+@include margin-left(10);
+@include margin-left(15);
+@include margin-left(20);
+
+// Right margins
+@include margin-right(5);
+@include margin-right(10);
+@include margin-right(15);
+@include margin-right(20);
+
+// Top margins
+@include margin-top(5);
+@include margin-top(10);
+@include margin-top(15);
+@include margin-top(20);
+
+// Bottom margins
+@include margin-bottom(100);
