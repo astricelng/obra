@@ -9,6 +9,7 @@
         <div class="home-landing__content">
             <div class="content-wrapper">
           		<div class="content__info">
+          			bu
           			<div class="logo">
 	                	<img src="{{ asset('assets/www/images/logo.png') }}">
 	                </div>
