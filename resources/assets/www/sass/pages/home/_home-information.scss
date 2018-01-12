@@ -92,4 +92,18 @@
     }
   }
 
+  .link__info-content{
+
+    a{
+        text-decoration: none;
+        cursor: pointer;
+        color: $redwine-color;
+
+        &:hover span{
+          color: $redwine-color;
+        }
+      }
+  }
+
+
 }

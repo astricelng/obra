@@ -80,7 +80,7 @@
                     insitam; est usus  legentis in ii
                 </div>
                 <div class="link__info-content upper redwine-text abel-bold text">
-                    hello@bratable.com
+                    <a href="mailto:info@obramiami.com" class="redwine-text">info@obramiami.com</a>
                 </div>
             </div>
 
@@ -93,7 +93,7 @@
                     insitam; est usus  legentis in ii
                 </div>
                 <div class="link__info-content upper redwine-text abel-bold text">
-                    See the map
+                    <a href="https://www.google.co.ve/maps/place/Jade+Brickell/@25.7598893,-80.1896019,19z/data=!4m5!3m4!1s0x88d9b681b0e7e275:0x818cd7dc661601b9!8m2!3d25.7603319!4d-80.189341?hl=es" target="_blank" class="redwine-text">See the map</a>
                 </div>
             </div>
         </div>
