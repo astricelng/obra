@@ -16,9 +16,9 @@
 
     <div id="nav-redes">
         <ul class="menu">
-            <li class=""><a href="https://www.facebook.com/ChefMichelleBernstein/" target="_blank" class="fa fa-facebook"></a></li>
-            <li class=""><a href="https://twitter.com/chefmichy" target="_blank" class="fa fa-twitter"></a></li>
-            <li class=""><a href="https://www.instagram.com/chefmichy/" target="_blank" class="fa fa-instagram"></a></li>
+            <li class=""><a href="https://www.facebook.com/obramiami/" target="_blank" class="fa fa-facebook"></a></li>
+            <li class=""><a href="https://twitter.com/obramiami" target="_blank" class="fa fa-twitter"></a></li>
+            <li class=""><a href="https://www.instagram.com/obramiami/" target="_blank" class="fa fa-instagram"></a></li>
         </ul>
     </div>
 
