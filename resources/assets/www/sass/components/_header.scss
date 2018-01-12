@@ -11,144 +11,288 @@
 
 // 1. Layout
 // ==========================================================================
-.header
+header
 {
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: $z-index-header;
+  background: $header-bg-movil;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10%;
+  align-items: stretch;
+  flex-direction: column;
 
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
+  height: $header-mobile-size;
+  transition: height .3s;  
 
-  background-color: $secondary-brand-bg;
-
-  @include respond-to($sm-break)
+  @include respond-to($md-break)
   {
-    background-color: transparent;
+    background: $header-bg;
+    height: $header-desktop-size;
+  }
+
+}
+
+
+header #nav-redes{
+
+  display: none;
+  height: $header-redes-size;
+
+  @include respond-to($md-break)
+  {
+    opacity: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    transition: opacity .3s, top .3s;
+  }
+
+  ul
+  {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5% 0 0;
+
+    li
+    {
+      /*font-family: $header-font;*/
+      //font-size: 0.75rem;
+      letter-spacing: 1px;
+
+      line-height: 30px;
+      display: inline-block;
+      margin-left: 30px;
+
+      cursor: pointer;
+
+      font-family: $font-AntonioR;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $gray-color;
+
+      a{
+        text-decoration:none;
+        color:$gray-color;
+      }
+
+      &:first-child img
+      {
+        margin-right: 10px;
+      }
+
+      &:last-child img
+      {
+        margin-left: 10px;
+      }
+    }
   }
 }
 
-// 2. Logo
-// ==========================================================================
-.logo-container
-{
-  position: relative;
-  width: 100%;
-  opacity: 1;
-  transition: opacity .1s;
-  text-align: left;
-  margin-left: $mobile-margin;
 
-  @include respond-to($sm-break)
+header #nav-controls{
+
+  height: $header-menu-size;
+  padding-top: 30px;
+
+  @include respond-to($md-break)
   {
-    text-align: center;
     margin-left: 0px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:  0;
+
+    transition: opacity .3s, top .3s;
+  }
+
+  ul
+  {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    li
+    {
+      /*font-family: $header-font;*/
+      //font-size: 0.75rem;
+      letter-spacing: 1px;
+
+      line-height: 30px;
+      cursor: pointer;
+
+      font-family: $font-AntonioR;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $redwine-color;
+
+      &.text_menu{
+        padding-top: 55px;
+        display: none;
+
+        @include respond-to($md-break)
+        {
+          display: block;
+        }
+      }
+
+      a{
+        text-decoration:none;
+        color:$redwine-color;
+
+      }
+
+      &:first-child img
+      {
+        margin-right: 10px;
+      }
+
+      &:last-child img
+      {
+        margin-left: 10px;
+      }
+    }
   }
 }
 
-.enowledge-logo
-{
-  position: relative;
-  width: auto;
-  height: 40px;
 
-  @include respond-to($sm-break)
-  {
-    height: 50px;
-  }
-
-  @include respond-to($lg-break)
-  {
-    height: 60px;
-  }
-}
-
-// 3. Nav trigger
+// 3. Nav menu trigger
 // ==========================================================================
-.nav-trigger
-{
-  position: absolute;
-  display: inline-block;
-  top: 0px;
-  right: $mobile-margin;
-  z-index: $z-index-trigger;
-
-  width: auto;
-  height: 100px;
-  padding: 30px 0px;
-
-  @include respond-to($sm-break)
-  {
-    right: $desktop-margin;
-    padding: 20px 0;
-  }
-}
-
 .trigger
 {
-  position: relative;
-  width: 40px;
-  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 5%;
 
-  background-color: $nav-trigger-bg;
-  border-radius: 100%;
+  width: 30px;
+  height: 30px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
   cursor: pointer;
 
-  @include bordered-shadow();
+  opacity: 1;
+  transition: opacity .3s, top .3s;
+  display: block;
 
   @include respond-to($sm-break)
   {
-    width: 60px;
-    height: 60px;
+    transition: opacity .3s, top .3s;
   }
 
-  .line
+  @include respond-to($md-break)
   {
-    position: relative;
-    width: 20px;
+    display: none;
+  }
+}
+
+.toggle-bars
+{
+  position: relative;
+
+  display: inline;
+  cursor: pointer;
+
+  .toggle-bar
+  {
+    width: 100%;
     height: 3px;
 
-    margin-left: auto;
-    margin-right: auto;
+    //background: $nav-trigger-bg;
+    background: #000;
+    margin: 5px auto;
+    backface-visibility: hidden;
 
-    background-color: $nav-trigger-bar;
     transition: all .3s;
+  }
+}
 
-    &:nth-child(1),
-    &:nth-child(2)
-    {
-      margin-bottom: 2px;
-    }
+.trigger.open .toggle-bar:nth-child(1) {
+    -webkit-transform: rotate(45deg) translate(6px,5px);
+    transform: rotate(45deg) translate(6px,5px);
+    transition: all .3s;
+}
+
+.trigger.open .toggle-bar:nth-child(2) {
+    opacity: 0;
+    transition: all .3s;
+}
+
+.trigger.open .toggle-bar:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate(6px,-5px);
+    transform: rotate(-45deg) translate(6px,-5px);
+    transition: all .3s;
+}
+
+#nav-trigger__title
+{
+  position: absolute;
+  top: 0px;
+  left: 40px;
+
+  font-family: $nav-title-font;
+  @include font-size(18px);
+  color: $nav-trigger-bg;
+  letter-spacing: 1px;
+
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: lowercase;
+  display: none;
+
+  @include respond-to($xlg-break)
+  {
+    @include font-size(20px);
   }
 
-  &.open
+  @include respond-to($xlg-break)
   {
-    .line
-    {
-      &:nth-child(1)
-      {
-        @include transform(rotate(45deg) translate(4px, 3px));
-        transition: all .3s;
-      }
+    @include font-size(22px);
+  }
 
-      &:nth-child(2)
-      {
-        opacity: 0;
-        transition: all .3s;
-      }
+  &:hover
+  {
+    text-decoration: none;
+  }
 
-      &:nth-child(3)
-      {
-        @include transform(rotate(-45deg) translate(4px, -3px));
-        transition: all .3s;
-      }
-    }
+  @include respond-to($sm-break)
+  {
+    display: block;
+  }
+}
+
+// 4. Hidden controls
+// ==========================================================================
+.hide-header-controls
+{
+  #nav-controls{
+    top: -100%;
+    opacity: 0;
+
+    transition: opacity .3s;
+  }
+
+}
+
+.hide-all-header-controls
+{
+    //background: $contact-bg;
+    transition: all .5s;    
+
+  #nav-controls{
+    top: -100%;
+    opacity: 0;
+    display: none;
+
+    transition: all .5s;
+  }
+
+  #nav-trigger{
+    top: -100%;
+    opacity: 0;
+
+    transition: all .5s;
   }
 }

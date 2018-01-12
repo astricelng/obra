@@ -12,88 +12,107 @@
 // ==========================================================================
 footer
 {
-  position: relative;
-  z-index: $z-index-footer;
-
-  padding: 25px $mobile-margin 25px;
-  background-color: $footer-bg;
-
-  text-align: center;
-
-  @include respond-to($sm-break)
-  {
-    text-align: left;
-    padding: 50px $desktop-margin 20px;
-  }
-}
-
-.footer-logo
-{
-  position: relative;
-  width: 100%;
-  text-align: center;
-
-  margin-bottom: 20px;
+  display: none;
 
   @include respond-to($md-break)
   {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    height: $footer-desktop-size;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    z-index: $z-index-footer;
+    height: $footer-desktop-size;
+    background: $footer-bg;
   }
 }
 
-.politics-column
-{
+// 2. Logo
+// ==========================================================================
+footer #nav-controls{
+  width: 100%;
+  opacity: 1;
+  transition: opacity .1s;
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 2%;
 
   @include respond-to($md-break)
   {
     text-align: right;
-  }
-}
-
-.sitemap-links
-{
-  position: relative;
-  list-style: none;
-  text-align: center;
-
-  @include respond-to($md-break)
-  {
-    text-align: left;
+    margin-left: 0px;
   }
 
-  li a
+  ul
   {
-    font-family: $footer-font;
-    color: $footer-sitemap-color;
-    @include font-size(16px);
 
-    cursor: pointer;
+    &.footer__menu{
+      list-style: none;
+      display: flex;
+      margin: 0;
+      justify-content: space-around;
+      align-items: center;
+      width: 70%;
+      color: $redwine-color;
+    }
 
-    &:hover,
-    &:focus
+    &.footer__redes{
+      list-style: none;
+      display: inline-block;
+      margin: 0;
+      color: $gray-color;
+    }
+
+    li
     {
-      color: $footer-sitemap-color;
+      /*font-family: $header-font;*/
+     // font-size: 0.75rem;
+      letter-spacing: 1px;
+      line-height: 22px;
+
+      transition: all .2s;
+      display: block;
+      cursor: pointer;
+
+      font-family: $font-AntonioR;
       text-decoration: none;
+      text-transform: lowercase;
+      text-transform: uppercase;
+      
+
+      @include respond-to($md-break)
+      {
+        display: inline-block;
+        margin-left: 30px;
+      }
+
+      a{
+        text-decoration:none;
+        color: inherit;
+      }
+
+      &:first-child img
+      {
+        margin-right: 10px;
+      }
+
+      &:last-child img
+      {
+        margin-left: 10px;
+      }
     }
   }
 }
 
-// 2. Typo
-// ==========================================================================
-.footer-text
-{
-  font-family: $footer-font;
-  color: $footer-color;
-  @include font-size(16px);
+footer #nav-controls .redes{
+  display: none;
 
-  &:hover,
-  &:focus
+  @include respond-to($md-break)
   {
-    color: $footer-color;
-    text-decoration: none;
+    display:inline-block;
   }
 }

@@ -26,27 +26,32 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 // 2. Colors
 // ==========================================================================
 $white-color: #ffffff;
+$gray-light-color: #eeeff1;
 
-$yellow-light-color: #f9efb0; // yellow light
-$yellow-dark-color: #ebe1a5; // yellow dark
+$orange-color: #E35000;
+$redwine-color: #9E5E4B;
+$gray-color: #666666;
+$gray-medium-color: #999999;
 
-$gray-light-color: #f5f5f5; // gray light
-$gray-color: #b2b2b2; // gray
-$gray-dark-color: #505050; // gray dark
-
-$redwine-color: #392b27; // red wine
 
 // 3. Backgrounds
 // ==========================================================================
-$body-bg: $gray-light-color; // gray dark
+$body-bg: $gray-light-color;
+$header-bg: $white-color;
+$header-bg-movil: $gray-light-color;
+$header-mobile-size: 150px;
+$header-desktop-size: 200px;
+$header-redes-size: 50px;
+$header-menu-size: 150px;
 
-$primary-brand-bg: $yellow-light-color; // yellow light
+$primary-brand-bg: $orange-color; // yellow light
 $secondary-brand-bg: $white-color; // white
 
 $white-panel-bg: $secondary-brand-bg; // white
 
-$contact-bg: $gray-light-color; // gray light
-$footer-bg: $gray-dark-color; // gray dark
+$footer-bg: $white-color; // gray dark
+$footer-mobile-size: 80px;
+$footer-desktop-size: 150px;
 
 // 4. Z-Index
 // ==========================================================================
@@ -56,32 +61,44 @@ $z-index-bgc: 1020;                         // 1020
 $z-index-layer: 1040;                       // 1040
 $z-index-panel: 1050;                       // 1050
 
-$z-index-footer: 1090;                      // 1090
+$z-index-footer: 1050;                      // 1090
 $z-index-header: 1090;                      // 1090
-$z-index-menu: 2000;                        // 2000
+$z-index-menu: 1080;                        // 2000
 $z-index-trigger: 2010;                     // 2010
+$z-index-preloader: 2010;                     // 2010
 
 // 5. Typography
 // ==========================================================================
-$font-avant: 'AvantGarde', sans-serif;
+$font-AntonioB: 'Antonio Bold', sans-serif;
+$font-AntonioR: 'Antonio Regular', sans-serif;
+$font-Monserrat:'Montserrat', sans-serif;
+$font-Abel: 'Abel', sans-serif;
 
 // Base typo vars
-$font-family-base: $font-avant;
+$font-family-base: $font-Abel;
 $font-size-base: 16px;
-$line-height-base: 1.6;
+$line-height-base: 1;
 
 // Fonts
-$base-title-font:  $font-avant;
-$base-text-font:  $font-avant;
+$base-title-font: $font-AntonioB;
+$base-text-font: $font-Abel;
+$font-title-size: 4.1rem;
+$font-subtitle-size: 3rem;
+$font-min-title-size: 1.1rem;
+$font-text-size: 0.9rem;
 
 // 6. Bounds
 // ==========================================================================
 $mobile-margin: 25px;
 $desktop-margin: 50px;
 
+// 7. Buttons
+// ==========================================================================
+$btn-primary-font: $font-Abel;
+
 // 8. Preloader
 // ==========================================================================
-$btn-primary-font: $font-avant;
+$btn-primary-font: $font-Abel;
 $btn-primary-color: $redwine-color; // red wine
 $btn-primary-bg: $primary-brand-bg; // transparent
 $btn-primary-hover-bg: darken($btn-primary-bg, 5%); // red light
@@ -90,30 +107,35 @@ $btn-primary-border: $primary-brand-bg; // red light
 
 // 9. Footer
 // ==========================================================================
-$footer-font: $font-avant;
+$footer-font: $font-Abel;
 $footer-color: $white-color; // white
 $footer-sitemap-color: $white-color; // yellow light
 
 // 10. Nav
 // ==========================================================================
 $nav-trigger-bg: $white-color; // white
-$nav-trigger-bar: $redwine-color; // red wine
+//$nav-trigger-bar: $redwine-color; // red wine
 
-$nav-title-font: $font-avant;
+$nav-title-font: $font-AntonioR;
 $nav-title-color: $gray-color; // gray
-
-$nav-option-font: $font-avant;
-$nav-option-color: $white-color; // white
 
 // 11. Inputs
 // ==========================================================================
-$input-font: $font-avant;
+$input-font: $font-Abel;
 
 $input-bg: transparent; // gray light
-$input-primary-color: $gray-color; // red wine
-$input-border: $gray-color; // gray dark
+$input-primary-color: $gray-color; // 
+$input-border: $white-color; // 
 $input-primary-active-color: $redwine-color; // yellow light
 
 // 12. Borders
 // ==========================================================================
 $gray-border: $gray-color; // gray light
+
+
+// 13. Menu
+$menu-primary-bg: $white-color;  //gray dark
+$menu-font: $font-AntonioR;
+$menu-color: $gray-color;  //white
+$close-bt-font: $font-AntonioR;
+$close-bt-color: $gray-color;  //green light

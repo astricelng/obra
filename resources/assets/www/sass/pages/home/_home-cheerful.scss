@@ -1,0 +1,181 @@
+// ==========================================================================
+// Home cheerful stylesheet
+// ==========================================================================
+//
+// Table of Contents:
+//
+//  1. Layout
+//  2. Typo
+
+
+// 1. Layout
+// ==========================================================================
+
+
+.home-slide.cheerful-section{
+	height: auto;
+	margin: 2% 0;
+
+	@include respond-to($md-break)
+	{
+		height: 100vh;
+		padding: 0 2%;
+		min-height: 700px;
+	}
+}
+
+.cheerful__wrapper {
+  min-height: 500px;
+  width: 100%;
+
+  	@include respond-to($xs-break)
+	{
+		min-height: 550px;
+	}
+
+  	@include respond-to($sm-break)
+	{
+		min-height: 650px;
+	}
+
+  	@include respond-to($md-break)
+	{	
+		display: flex;
+		justify-content: stretch;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.cheerful__bgc {
+  background-image: url('../../../images/cheerful.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+
+  	@include respond-to($xs-break)
+	{
+		min-height: 400px;
+	}
+
+  	@include respond-to($sm-break)
+	{
+		min-height: 450px;
+	}
+
+  	@include respond-to($md-break)
+	{	
+		min-height: 700px;
+	}
+}
+
+.cheerful__cright
+{
+	position: relative;    
+	width:100%;
+	min-height: 350px;
+	//background: #f4f4f4;
+
+	@include respond-to($xs-break)
+	{
+		min-height: 400px;
+	}
+
+	@include respond-to($sm-break)
+	{
+		min-height: 450px;
+	}
+	
+  	@include respond-to($md-break)
+	{	
+		height: 100%;
+  		width: 48%;	
+	}
+}
+
+.cheerful__content {
+  width: 100%;
+  min-height: 150px;
+  padding: 20px;
+
+	.home-cheerful__title {
+		margin: 0;
+		padding: 0;
+		z-index: $z-index-layer;
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+		line-height: 1;
+		text-align: center;
+		justify-content: center;
+
+		.first-title{
+			letter-spacing: 0.1em;
+		}
+
+		.second-title {
+			padding-left: 10px;
+
+			@include respond-to($md-break)
+			{
+				padding: 2% 0 4%;
+			}
+		}
+
+		@include respond-to($md-break)
+		{
+			text-align: left;
+			margin: 0;
+			flex-direction: column;
+			justify-content: baseline;
+		}
+
+
+	}
+
+	.cheerful-content{
+		line-height: 1.4;
+		text-align: left;
+		padding: 0;
+
+		@include respond-to($xs-break)
+		{
+			padding: 0 10%;
+		}
+
+		@include respond-to($sm-break)
+		{
+			padding: 0 15%;
+		}
+
+		@include respond-to($md-break)
+		{
+			width: 70%;
+			padding: 0;
+		}
+	}
+
+	@include respond-to($xs-break)
+	{
+		min-height: 150px;
+	}
+
+	@include respond-to($sm-break)
+	{
+		min-height: 200px;
+	}
+
+	@include respond-to($md-break)
+	{	    
+	    height: 100%;
+  		width: 52%;	
+  		display: flex;
+  		flex-direction: column;
+  		justify-content: center;
+  		padding: 0 20px 20px 90px;
+	}
+
+}

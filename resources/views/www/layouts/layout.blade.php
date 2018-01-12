@@ -27,11 +27,15 @@
 
         <div class="global-container">
 
+            @include('www.layouts.partials._header')
+
             <div class="page-container">
 
                 @yield('content')
 
             </div>
+
+             @include('www.layouts.partials._footer')
 
         </div>
 

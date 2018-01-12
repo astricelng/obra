@@ -28,10 +28,34 @@ body
   font-size: $font-size-base;
 }
 
+html{
+
+  @include respond-to($sm-break)
+  {
+    font-size: 1.2rem;
+  }
+
+  @include respond-to($md-break)
+  {
+    font-size: 1.3rem;
+  }
+
+  @include respond-to($lg-break)
+  {
+    font-size: 1.4rem;
+  }
+
+  @include respond-to($xlg-break)
+  {
+    font-size: 2rem;
+  }
+
+}
+
 body
 {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 
   font-family: $font-family-base;
   font-size: $font-size-base;
@@ -51,20 +75,86 @@ body
 {
   position: static;
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: $z-index-base;
+
+  @include respond-to($sm-break)
+  {
+    width: calc(100% + 16px);
+  }
 }
 
 .page-container
 {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  position: relative;
   z-index: $z-index-base;
-  overflow-x: hidden;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2%;
+
+  @include respond-to($md-break)
+  {
+    display: block;
+    padding: 0;
+  }
+
+}
+
+.white-text{
+  color: $white-color;
+}
+
+.redwine-text{
+  color: $redwine-color;
+}
+
+.orange-text{
+  color: $orange-color;
+}
+
+.gray-text{
+  color: $gray-color;
+}
+
+.gray-medium-text{
+  color: $gray-medium-color;
+}
+
+.antonio-regular{
+  font-family: $font-AntonioR;
+}
+
+.antonio-bold{
+  font-family: $font-AntonioB;
+}
+
+.monserrat-regular{
+  font-family: $font-Monserrat;
+  font-weight: 400;
+}
+
+.monserrat-bold{
+  font-family: $font-Monserrat;
+  font-weight: 700;
+}
+
+.abel-regular{
+  font-family: $font-Abel;
+}
+
+.abel-bold{
+  font-family: $font-Abel;
+  font-weight: bold;
+}
+
+.upper{
+  text-transform: uppercase;
+}
+
+.bold{
+  font-weight: 700;
 }
 
 // 2. Decorative elements

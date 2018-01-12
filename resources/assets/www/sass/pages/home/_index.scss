@@ -7,8 +7,158 @@
 //  1. Typo
 //  . Home imports
 
+.big-title,
+{
+  @include respond-to($md-break)
+  {
+    font-size: 6.5em;
+  }
+
+  @include respond-to($lg-break)
+  {
+    font-size: 7em;
+  }
+}
+
+.title,
+{
+  font-size: 2.5em;
+
+  @include respond-to($xs-break)
+  {
+    font-size: 3em;
+  }
+
+  @include respond-to($sm-break)
+  {
+    font-size: 4.5em;
+  }
+
+  @include respond-to($md-break)
+  {
+    font-size: 5em;
+  }
+
+  @include respond-to($lg-break)
+  {
+    font-size: 5.6em;
+  }
+}
+
+.title-info,
+{
+  font-size: 2em;
+
+  @include respond-to($xs-break)
+  {
+    font-size: 2.5em;
+  }
+
+  @include respond-to($sm-break)
+  {
+    font-size: 3.5em;
+  }
+
+  @include respond-to($md-break)
+  {
+    font-size: 4em;
+  }
+
+  @include respond-to($lg-break)
+  {
+    font-size: 4.7em;
+  }
+}
+
+.sub-title,
+{
+  font-size: 2em;
+
+  @include respond-to($xs-break)
+  {
+    font-size: 2.5em;
+  }
+
+  @include respond-to($sm-break)
+  {
+    font-size: 4em;
+  }
+
+  @include respond-to($md-break)
+  {
+    font-size: 4.5em;
+  }
+
+  @include respond-to($lg-break)
+  {
+    font-size: 5em;
+  }
+}
+
+
+.title-text,
+{
+  font-size: 1.1em;
+
+  @include respond-to($sm-break)
+  {
+    font-size: 1.3em;
+  }
+
+  @include respond-to($md-break)
+  {
+    font-size: 1.5em;
+  }
+
+  @include respond-to($lg-break)
+  {
+    font-size: 1.55em;
+  }
+}
+
+
+
+.text,
+{
+  font-size: 1em;
+
+  @include respond-to($sm-break)
+  {
+    font-size: 1.2em;
+  }
+
+  @include respond-to($md-break)
+  {
+    font-size: 1.4em;
+  }
+
+  @include respond-to($lg-break)
+  {
+    font-size: 1.45em;
+  }
+}
+
+
+.menu,
+{
+
+  @include respond-to($md-break)
+  {
+    font-size: 1.2em;
+  }
+
+  @include respond-to($lg-break)
+  {
+    font-size: 1.4em;
+  }
+}
+
 
 
 // 3. Home imports
 // ==========================================================================
 @import "home-landing";
+@import "home-welcome";
+@import "home-cheerful";
+@import "home-about";
+@import "home-information";

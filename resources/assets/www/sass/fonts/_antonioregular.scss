@@ -1,0 +1,11 @@
+// ==========================================================================
+// Antonio Regular font
+// ==========================================================================
+
+@font-face {
+  font-family: 'Antonio Regular';
+  src: url('#{$local-font-path}/antonio-regular/antonio-regular.woff') format('woff');
+  src: url('#{$local-font-path}/antonio-regular/antonio-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
